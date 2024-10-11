@@ -1,5 +1,4 @@
-<div class="flex flex-row px-6 py-3 bg-white border-b border-blue-600 items-center justify-between">
-  
+<div class="fixed top-0 left-0 w-full z-50 flex flex-row px-6 py-3 bg-white border-b border-blue-600 items-center justify-between">
   {{-- logo --}}
   <a href="{{ url('/') }}" class="flex gap-2 items-center">
     <img src="{{ asset('img/logo-sika3.png') }}" alt="logo-sika3" class="h-10 w-auto">
@@ -21,13 +20,11 @@
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
           <img
-            alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            alt="profile"
+            src="https://res.cloudinary.com/dqr9vycth/image/upload/v1717192588/profile_dummy.png" />
         </div>
       </div>
-      <ul
-        tabindex="0"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+      <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
         <li><a>Login</a></li>
         <li><a>Register</a></li>
       </ul>

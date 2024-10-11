@@ -1,4 +1,4 @@
-<footer class="footer bg-slate-200 text-base-content p-10">
+<footer class="footer bg-slate-200 text-base-content px-10 py-6">
   <aside>
     <a href="{{ url('/') }}" class="flex gap-2 items-center">
       <img src={{ asset('img/logo-sika3.png') }} alt="logo-sika3" class="h-10 w-auto">
@@ -14,9 +14,8 @@
   </nav>
   <nav>
     <h6 class="footer-title">Social Media</h6>
-    <i class="fa-brands fa-square-instagram"></i>
-    <a class="link link-hover">Privacy policy</a>
-    <a class="link link-hover">Cookie policy</a>
+    <a href="{{ url('https://www.instagram.com/silogindonesia/') }}" class="flex items-center gap-2"><i class="fa-brands fa-instagram text-xl"></i>@silogindonesia</a>
+    <a href="{{ url('https://www.youtube.com/@silogindonesia2868') }}" class="flex items-center gap-2"><i class="fa-brands fa-youtube text-xl"></i>silog indonesia</a>
   </nav>
   <div>
     <p class="font-semibold">Powered By :</p>

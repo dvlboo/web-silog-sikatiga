@@ -1,5 +1,60 @@
+@import "node_modules/@fortawesome/fontawesome-free/css/all.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import "node_modules/@fortawesome/fontawesome-free/css/all.css";
+
+:root {
+  --color-primary: #0066f5;
+  --color-secondary: #ffffff;
+  --color-tertiary: #000000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  line-height: 1.5;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-secondary);
+}
+
+/* Custom scrollbar styles for WebKit browsers */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
+  border-radius: 10px; /* Add border to scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border: 3px solid var(--color-secondary); /* Add border to scrollbar thumb */
+  border-radius: 10px;
+}
+
+/* Custom scrollbar styles for Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-secondary);
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 10px; 
+}
+
+*::-webkit-scrollbar-thumb {
+  border: 3px solid var(--color-secondary); /* Add border to scrollbar thumb */
+  border-radius: 10px;
+}
