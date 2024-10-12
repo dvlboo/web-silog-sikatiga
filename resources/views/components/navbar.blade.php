@@ -1,4 +1,5 @@
-<div class="fixed top-0 left-0 w-full z-50 flex flex-row px-6 py-3 bg-white border-b border-blue-600 items-center justify-between">
+<div 
+  class="fixed top-0 left-0 w-full z-50 flex flex-row px-6 py-3 bg-white border-b border-blue-600 items-center justify-between">
   {{-- logo --}}
   <a href="{{ url('/') }}" class="flex gap-2 items-center">
     <img src="{{ asset('img/logo-sika3.png') }}" alt="logo-sika3" class="h-10 w-auto">
@@ -25,8 +26,8 @@
         </div>
       </div>
       <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a>Login</a></li>
-        <li><a>Register</a></li>
+        <li><a class="font-semibold" href="/login">Login</a></li>
+        <li><a class="font-semibold" href="">Register</a></li>
       </ul>
     </div>
   </div>
