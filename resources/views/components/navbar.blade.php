@@ -16,6 +16,22 @@
 
   {{-- profile --}}
   <div class="flex flex-row items-center gap-2">
+    @if (Auth::check())
+    <h3 class="font-bold text-blue-600">Hai, {{ Auth::user()->username }}</h3>
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+        <div class="w-10 rounded-full">
+          <img
+            alt="profile"
+            src="{{ Auth::user()->photo }}" />
+        </div>
+      </div>
+      <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        <li><a class="font-semibold" href="">Dashboard</a></li>
+        <li><a class="font-semibold" href="{{ route('logout') }}">Logout</a></li>
+      </ul>
+    </div> <!-- Penutup div dropdown -->
+    @else
     <h3 class="font-bold text-blue-600">Hai, Guests</h3>
     <div class="dropdown dropdown-end">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
@@ -26,9 +42,11 @@
         </div>
       </div>
       <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a class="font-semibold" href="/login">Login</a></li>
-        <li><a class="font-semibold" href="">Register</a></li>
+        <li><a class="font-semibold" href="{{ route('login') }}">Login</a></li>
+        <li><a class="font-semibold" href="{{ route('register') }}">Register</a></li>
       </ul>
-    </div>
-  </div>
+    </div> <!-- Penutup div dropdown -->
+    @endif
+</div>
+
 </div>

@@ -12,7 +12,8 @@
   {{-- font --}}
 </head>
 <body class="font-sans">
-  <div class="bg-base-200 min-h-screen flex items-center justify-center">
+  <div class="bg-blue-500 min-h-screen flex items-center justify-center">
+    <div class="absolute top-1/2 h-[40vw] w-[40vw] -translate-y-1/2 rounded-full bg-blue-700"></div>
     {{ $slot }}
   </div>
 </body>
