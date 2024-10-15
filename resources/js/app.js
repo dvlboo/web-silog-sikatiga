@@ -38,29 +38,29 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-$(document).ready(function () {
-  // function sending register form
-  $('#registerForm').on('submit', function (e) {
-    e.preventDefault();
+// $(document).ready(function () {
+//   // function sending register form
+//   $('#registerForm').on('submit', function (e) {
+//     e.preventDefault();
     
-    $.ajax({
-      url: $(this).attr('action'),
-      type: 'POST',
-      data: $(this).serialize(),
-      success: function (response) {
-        window.location.href = response.redirect;
-      },
-      error: function (xhr) {
-        let errors = xhr.responseJSON.errors;
+//     $.ajax({
+//       url: $(this).attr('action'),
+//       type: 'POST',
+//       data: $(this).serialize(),
+//       success: function (response) {
+//         window.location.href = response.redirect;
+//       },
+//       error: function (xhr) {
+//         let errors = xhr.responseJSON.errors;
         
-        $('.error-message').remove();
+//         $('.error-message').remove();
 
-        for (let key in errors) {
-          if (errors.hasOwnProperty(key)) {
-            $('input[name="' + key + '"]').after('<p class="error-message text-xs text-red-500 mt-1">' + errors[key][0] + '</p>');
-          }
-        }
-      }
-    });
-  });
-});
+//         for (let key in errors) {
+//           if (errors.hasOwnProperty(key)) {
+//             $('input[name="' + key + '"]').after('<p class="error-message text-xs text-red-500 mt-1">' + errors[key][0] + '</p>');
+//           }
+//         }
+//       }
+//     });
+//   });
+// });

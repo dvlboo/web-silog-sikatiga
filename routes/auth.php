@@ -13,6 +13,9 @@ Route::middleware('guest')->group(function () {
     Route::post('/register', [AuthController::class, 'register']);
 });
 
+Route::get('/verify-otp', [AuthController::class, 'showOtpForm'])->name('otp.verify');
+Route::post('/verify-otp', [AuthController::class, 'verifyOtp']);
+
 // Route untuk logout
 Route::get('/logout', [AuthController::class, 'logout']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');

@@ -20,8 +20,9 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->text('photo');
-            $table->boolean('is_verified')->default(false);
             $table->enum('role', ['admin', 'user'])->default('user');
+            $table->string('otp_code')->nullable();
+            $table->boolean('is_verified')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });
