@@ -21,6 +21,44 @@
     </div>
   </div>
 
-{{-- news --}}
+  {{-- partner --}}
+  <div class="container mx-auto my-10">
+    <h2 class="text-4xl font-bold text-center mb-5">Our Partner</h2>
+
+    <div class="flex flex-row justify-around items-center">
+      <div class="bg-white p-5 shadow-md rounded-md">
+        <img src="{{ asset('img/logo-silog.png') }}" alt="logo-silog" class="h-14 w-auto mx-auto">
+      </div>
+      <div class="bg-white p-5 shadow-md rounded-md">
+        <img src="{{ asset('img/logo-silog.png') }}" alt="logo-silog" class="h-14 w-auto mx-auto">
+      </div>
+      <div class="bg-white p-5 shadow-md rounded-md">
+        <img src="{{ asset('img/logo-silog.png') }}" alt="logo-silog" class="h-14 w-auto mx-auto">
+      </div>
+    </div>
+  </div>
+  
+  {{-- news --}}
+  <div class="container mx-auto my-10">
+    <h2 class="text-4xl font-bold text-center mb-5">Latest News</h2>
+
+    <div class="grid grid-cols-3 gap-5">
+      <div class="bg-white p-5 shadow-md rounded-md">
+        <img src="https://cdn.suaranetwork.com/images/2024/07/25/aa8a7719af4c.jpg" alt="news" class="h-48 w-full object-cover rounded-md">
+        <h3 class="text-xl font-bold mt-3">Lorem ipsum dolor sit amet</h3>
+        <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec...</p>
+      </div>
+      <div class="bg-white p-5 shadow-md rounded-md">
+        <img src="https://cdn.suaranetwork.com/images/2024/07/25/aa8a7719af4c.jpg" alt="news" class="h-48 w-full object-cover rounded-md">
+        <h3 class="text-xl font-bold mt-3">Lorem ipsum dolor sit amet</h3>
+        <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec...</p>
+      </div>
+      <div class="bg-white p-5 shadow-md rounded-md">
+        <img src="https://cdn.suaranetwork.com/images/2024/07/25/aa8a7719af4c.jpg" alt="news" class="h-48 w-full object-cover rounded-md">
+        <h3 class="text-xl font-bold mt-3">Lorem ipsum dolor sit amet</h3>
+        <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec...</p>
+      </div>
+    </div>
+  </div>
 
 </x-layout>

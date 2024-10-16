@@ -2,7 +2,7 @@
   <aside>
     <a href="{{ url('/') }}" class="flex gap-2 items-center">
       <img src={{ asset('img/logo-sika3.png') }} alt="logo-sika3" class="h-10 w-auto">
-      <h1 class="text-4xl text-blue-600 font-black">SIKA<span class="text-green-400">3</span></h1>
+      <h1 class="text-4xl text-blue-600 font-black">SIKA<span class="text-green-400">TIGA</span></h1>
     </a>
     <p class="font-semibold">Salam Sehat, Salam Safety</p>
   </aside>

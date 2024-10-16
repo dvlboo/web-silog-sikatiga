@@ -80,42 +80,45 @@ class AuthController extends Controller
         'otp_code' => $otp_code,
         'is_verified' => false
       ]);
+
+      // Auth::login($user);
+  
+      Mail::to($user->email)->send(new SendOtpMail($otp_code));
+  
+      // return redirect()->route('homepage');
+      
+      return redirect()->route('otp.verify')->with('message', 'Registrasi berhasil. Periksa email Anda untuk kode OTP.');
+    
     }
 
-    Auth::login($user);
-
-    // Mail::to($user->email)->send(new SendOtpMail($otp_code));
-
-    return redirect()->route('homepage');
-    
-    // return redirect()->route('otp.verify')->with('message', 'Registrasi berhasil. Periksa email Anda untuk kode OTP.');
   }
 
-  // form verify otp
-  // public function showOtpForm()
-  // {
-  //   return view('auth.verify-otp');
-  // }
+  // verify otp
+  public function showOtpForm()
+  {
+    return view('auth.verify-otp');
+  }
 
-  // public function verifyOtp(Request $request)
-  // {
-  //   $request->validate(['otp_code' => 'required|string']);
+  public function verifyOtp(Request $request)
+  {
+    $request->validate(['otp_code' => 'required|string']);
 
-  //   $user = User::where('otp_code', $request->otp_code)->first();
+    $user = User::where('otp_code', $request->otp_code)->first();
 
-  //   if ($user) {
-  //     // Set akun sebagai terverifikasi
-  //     $user->is_verified = true;
-  //     $user->otp_code = null; // Hapus OTP setelah verifikasi
-  //     $user->save();
+    if ($user) {
+      // Set akun sebagai terverifikasi
+      $user->is_verified = true;
+      $user->otp_code = null; // Hapus OTP setelah verifikasi
+      $user->save();
 
-  //       return redirect('/')->with('message', 'Akun Anda telah terverifikasi.');
+      Auth::login($user);
+      
+      return redirect('/')->with('message', 'Akun Anda telah terverifikasi.');
 
-  //       Auth::login($user);
-  //   } else {
-  //     return back()->withErrors(['otp_code' => 'Kode OTP salah.']);
-  //   }
-  // }
+    } else {
+      return back()->withErrors(['otp_code' => 'Kode OTP salah.']);
+    }
+  }
 
 
   // logout process
