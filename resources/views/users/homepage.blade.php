@@ -21,19 +21,37 @@
     </div>
   </div>
 
+  {{-- kebijakan dan sertifikat --}}
+
+  <div class="container mx-auto my-10">
+    <h2 class="text-4xl font-bold text-center mb-5">Kebijakan dan Sertifikat</h2>
+
+    <div class="grid grid-cols-2 gap-5">
+      <div class="bg-white p-5 shadow-md rounded-md">
+        <img src="{{ asset('img/kebijakan.jpg') }}" alt="kebijakan" class="h-48 w-full object-cover rounded-md">
+        <h3 class="text-xl font-bold mt-3">Kebijakan K3</h3>
+        <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec...</p>
+      </div>
+      <div class="bg-white p-5 shadow-md rounded-md">
+        <img src="{{ asset('img/sertifikat.jpg') }}" alt="sertifikat" class="h-48 w-full object-cover rounded-md">
+        <h3 class="text-xl font-bold mt-3">Sertifikat K3</h3>
+        <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec...</p>
+      </div>
+    </div>
+  </div>
   {{-- partner --}}
   <div class="container mx-auto my-10">
     <h2 class="text-4xl font-bold text-center mb-5">Our Partner</h2>
 
     <div class="flex flex-row justify-around items-center">
       <div class="bg-white p-5 shadow-md rounded-md">
-        <img src="{{ asset('img/logo-silog.png') }}" alt="logo-silog" class="h-14 w-auto mx-auto">
+        <img src="{{ asset('img/logo-vufa.png') }}" alt="logo-vufa" class="h-16 w-auto mx-auto">
       </div>
       <div class="bg-white p-5 shadow-md rounded-md">
-        <img src="{{ asset('img/logo-silog.png') }}" alt="logo-silog" class="h-14 w-auto mx-auto">
+        <img src="{{ asset('img/logo-silog.png') }}" alt="logo-silog" class="h-16 w-auto mx-auto">
       </div>
       <div class="bg-white p-5 shadow-md rounded-md">
-        <img src="{{ asset('img/logo-silog.png') }}" alt="logo-silog" class="h-14 w-auto mx-auto">
+        <img src="{{ asset('img/logo-sid.png') }}" alt="logo-sid" class="h-16 w-auto mx-auto">
       </div>
     </div>
   </div>
