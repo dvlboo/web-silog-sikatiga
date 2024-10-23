@@ -1,5 +1,5 @@
-<div 
-  class="fixed top-0 left-0 w-full z-50 flex flex-row px-6 py-3 bg-white border-b border-blue-600 items-center justify-between">
+<div {{ $attributes->merge(['class' => 'top-0 left-0 w-full z-50 flex flex-row px-6 py-3 bg-white border-b border-blue-600 items-center justify-between']) }}>
+  
   {{-- logo --}}
   <a href="{{ url('/') }}" class="flex gap-2 items-center">
     <img src="{{ asset('img/logo-sika3.png') }}" alt="logo-sika3" class="h-10 w-auto">
@@ -11,7 +11,7 @@
     <a class="font-semibold hover:font-bold" href="">APD</a>
     <a class="font-semibold hover:font-bold" href="">APAR & P3K</a>
     <a class="font-semibold hover:font-bold" href="">COLOR CODE</a>
-    <a class="font-semibold hover:font-bold" href="">RISK REGISTER</a>
+    <a class="font-semibold hover:font-bold" href="{{ url('/risk-register') }}">RISK REGISTER</a>
   </div>
 
   {{-- profile --}}
@@ -37,6 +37,6 @@
       <a href="{{ route('register') }}" class="py-2 px-5 font-semibold text-white bg-green-500 hover:bg-green-700 rounded-lg">Daftar</a>
     </div>
     @endif
-</div>
+  </div>
 
 </div>

@@ -13,7 +13,7 @@
 </head>
 <body class="font-sans">
   <div>
-    <x-navbar></x-navbar>
+    <x-navbar {{ $attributes }} ></x-navbar>
     
     {{ $slot }}
 

@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout class="fixed">
   
   {{-- hero --}}
   <div 
@@ -21,37 +21,61 @@
     </div>
   </div>
 
-  {{-- kebijakan dan sertifikat --}}
+  {{-- kebijakan --}}
 
   <div class="container mx-auto my-10">
-    <h2 class="text-4xl font-bold text-center mb-5">Kebijakan dan Sertifikat</h2>
+    <h2 class="text-4xl font-bold text-center mb-5">Kebijakan Perusahaan</h2>
 
-    <div class="grid grid-cols-2 gap-5">
+    <div class="grid md:grid-cols-3 gap-5">
       <div class="bg-white p-5 shadow-md rounded-md">
-        <img src="{{ asset('img/kebijakan.jpg') }}" alt="kebijakan" class="h-48 w-full object-cover rounded-md">
-        <h3 class="text-xl font-bold mt-3">Kebijakan K3</h3>
+        <h3 class="text-xl font-bold mt-3">Kebijakan K3L Dan 5R</h3>
         <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec...</p>
       </div>
       <div class="bg-white p-5 shadow-md rounded-md">
-        <img src="{{ asset('img/sertifikat.jpg') }}" alt="sertifikat" class="h-48 w-full object-cover rounded-md">
-        <h3 class="text-xl font-bold mt-3">Sertifikat K3</h3>
+        <h3 class="text-xl font-bold mt-3">Kebijakan SWA (Stop Work Action)</h3>
+        <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec...</p>
+      </div>
+      <div class="bg-white p-5 shadow-md rounded-md">
+        <h3 class="text-xl font-bold mt-3">Kebijakan Anti Alkohol Dan Narkoba</h3>
         <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec...</p>
       </div>
     </div>
   </div>
+
+  {{-- sertifikat --}}
+  <div class="container mx-auto my-10">
+    <h2 class="text-4xl font-bold text-center mb-5">Sertifikat Perusahaan</h2>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="bg-white p-5 shadow-md rounded-md">
+        <h3 class="text-xl font-bold mt-3">Kebijakan K3L Dan 5R</h3>
+        <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec...</p>
+      </div>
+      <div class="bg-white p-5 shadow-md rounded-md">
+        <h3 class="text-xl font-bold mt-3">Kebijakan SWA (Stop Work Action)</h3>
+        <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec...</p>
+      </div>
+      <div class="bg-white p-5 shadow-md rounded-md">
+        <h3 class="text-xl font-bold mt-3">Kebijakan Anti Alkohol Dan Narkoba</h3>
+        <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec...</p>
+      </div>
+    </div>
+  </div>
+
+  
   {{-- partner --}}
   <div class="container mx-auto my-10">
     <h2 class="text-4xl font-bold text-center mb-5">Our Partner</h2>
 
-    <div class="flex flex-row justify-around items-center">
+    <div class="flex md:flex-row flex-col justify-around items-center">
       <div class="bg-white p-5 shadow-md rounded-md">
-        <img src="{{ asset('img/logo-vufa.png') }}" alt="logo-vufa" class="h-16 w-auto mx-auto">
+        <img src="{{ asset('img/logo-sid.png') }}" alt="logo-sid" class="h-16 w-auto mx-auto">
       </div>
-      <div class="bg-white p-5 shadow-md rounded-md">
+      <div class="bg-white md:my-0 my-5 p-5 shadow-md rounded-md">
         <img src="{{ asset('img/logo-silog.png') }}" alt="logo-silog" class="h-16 w-auto mx-auto">
       </div>
       <div class="bg-white p-5 shadow-md rounded-md">
-        <img src="{{ asset('img/logo-sid.png') }}" alt="logo-sid" class="h-16 w-auto mx-auto">
+        <img src="{{ asset('img/logo-vufa.png') }}" alt="logo-vufa" class="h-16 w-auto mx-auto">
       </div>
     </div>
   </div>
@@ -60,7 +84,7 @@
   <div class="container mx-auto my-10">
     <h2 class="text-4xl font-bold text-center mb-5">Latest News</h2>
 
-    <div class="grid grid-cols-3 gap-5">
+    <div class="grid md:grid-cols-3 gap-5">
       <div class="bg-white p-5 shadow-md rounded-md">
         <img src="https://cdn.suaranetwork.com/images/2024/07/25/aa8a7719af4c.jpg" alt="news" class="h-48 w-full object-cover rounded-md">
         <h3 class="text-xl font-bold mt-3">Lorem ipsum dolor sit amet</h3>

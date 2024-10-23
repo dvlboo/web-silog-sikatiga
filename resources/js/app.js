@@ -1,5 +1,5 @@
 import './bootstrap';
-import $ from 'jquery';
+// import $ from 'jquery';
 
 // togle password
 document.addEventListener('DOMContentLoaded', function () {

@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('users/homepage');
 })->name('homepage');
 
+Route::get('/risk-register', function () {
+    return view('users/risk-register-page');
+})->name('risk-register');
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
