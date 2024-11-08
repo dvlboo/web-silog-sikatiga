@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class APDController extends Controller
 {
-    public function index()
+    public function view()
     {
         // Dummy Data
         $apds = [

@@ -26,7 +26,7 @@
         <a href="{{ url('/admin/apd') }}" class="block py-2 px-3 rounded hover:bg-gray-700">APD</a>
         <a href="" class="block py-2 px-3 rounded hover:bg-gray-700">APAR & P3K</a>
         <a href="" class="block py-2 px-3 rounded hover:bg-gray-700">Color Code</a>
-        <a href="" class="block py-2 px-3 rounded hover:bg-gray-700">Risk Register</a>
+        <a href="{{ url('/admin/risk-register') }}" class="block py-2 px-3 rounded hover:bg-gray-700">Risk Register</a>
       </nav>
 
       <div class="border-t border-gray-700 p-4">
