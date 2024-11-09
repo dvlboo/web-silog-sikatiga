@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\APDController;
+use App\Http\Controllers\RiskRegisterController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', function () {
@@ -13,7 +14,7 @@ Route::put('/admin/apd/{id}', [APDController::class, 'update'])->name('apd.updat
 Route::delete('/admin/apd/{id}', [APDController::class, 'delete'])->name('apd.delete');
 
 
-Route::get('/admin/risk-register', [APDController::class, 'view'])->name('risk-register.view');
+Route::get('/admin/risk-register', [RiskRegisterController::class, 'view'])->name('risk-register.view');
 Route::post('/admin/risk-register', [ApdController::class, 'upload'])->name('risk-register.upload');
 Route::put('/admin/risk-register/{id}', [ApdController::class, 'update'])->name('risk-register.update');
 Route::delete('/admin/risk-register/{id}', [ApdController::class, 'delete'])->name('risk-register.delete');
