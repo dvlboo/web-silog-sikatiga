@@ -15,7 +15,6 @@ Route::delete('/admin/apd/{id}', [APDController::class, 'delete'])->name('apd.de
 
 
 Route::get('/admin/risk-register', [RiskRegisterController::class, 'view'])->name('risk-register.view');
-Route::post('/admin/risk-register', [ApdController::class, 'upload'])->name('risk-register.upload');
 Route::put('/admin/risk-register/{id}', [ApdController::class, 'update'])->name('risk-register.update');
 Route::delete('/admin/risk-register/{id}', [ApdController::class, 'delete'])->name('risk-register.delete');
 

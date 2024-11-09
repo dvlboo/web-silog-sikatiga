@@ -1,14 +1,15 @@
 <?php
 
+use App\Http\Controllers\RiskRegisterController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('users/homepage');
 })->name('homepage');
 
-Route::get('/risk-register', function () {
-    return view('users/risk-register-page');
-})->name('risk-register');
+Route::get('/risk-register', [RiskRegisterController::class, 'show'])->name('risk-register');
+Route::post('/risk-register', [RiskRegisterController::class, 'upload']);
+
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name_reporter');
             $table->string('name_finding');
-            $table->string('description');
             $table->date('date');
-            $table->text('photo');
+            $table->string('description');
+            $table->text('photo')->nullable();
             $table->string('control');
             $table->timestamps();
             $table->softDeletes();
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('risk-registers');
+        Schema::dropIfExists('risk_registers');
     }
 };

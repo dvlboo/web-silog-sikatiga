@@ -22,12 +22,20 @@
       </a>
         
       {{-- menu --}}
-      <nav class="flex-1 px-4 py-2 mt-5">
-        <a href="{{ url('/admin/apd') }}" class="block py-2 px-3 rounded hover:bg-gray-700">APD</a>
-        <a href="" class="block py-2 px-3 rounded hover:bg-gray-700">APAR & P3K</a>
-        <a href="" class="block py-2 px-3 rounded hover:bg-gray-700">Color Code</a>
-        <a href="{{ url('/admin/risk-register') }}" class="block py-2 px-3 rounded hover:bg-gray-700">Risk Register</a>
-      </nav>
+      <ul class="menu rounded-box w-auto px-4 py-2 mt-5 flex-1">
+        <li>
+          <details open>
+            <summary>APD</summary>
+            <ul>
+              <li><a href="{{ url('/admin/add-apd') }}" class="block py-2 px-3 rounded hover:bg-gray-700">Tambah APD</a></li>
+              <li><a href="{{ url('/admin/show-apd') }}" class="block py-2 px-3 rounded hover:bg-gray-700">Data APD</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a>APAR & P3K</a></li>
+        <li><a>Color Code</a></li>
+        <li><a href="{{ url('/admin/risk-register') }}" class="block py-2 px-3 rounded hover:bg-gray-700">Risk Register</a></li>
+      </ul>
 
       <div class="border-t border-gray-700 p-4">
         <a href="{{ route('logout') }}" class="block py-2 px-3 rounded bg-red-600 text-center">Logout</a>
