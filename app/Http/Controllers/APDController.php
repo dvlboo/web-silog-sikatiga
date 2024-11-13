@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\APD;
 use Illuminate\Http\Request;
 
 class APDController extends Controller
@@ -9,45 +10,50 @@ class APDController extends Controller
     public function view()
     {
         // Dummy Data
-        $apds = [
-            [
-                'id' => 1,
-                'image' => 'https://via.placeholder.com/150',
-                'name' => 'Helm Safety',
-                'size' => 'L',
-                'stock' => 10,
-                'valid_until' => '2025-12-31'
-            ],
-            [
-                'id' => 2,
-                'image' => 'https://via.placeholder.com/150',
-                'name' => 'Sarung Tangan',
-                'size' => 'M',
-                'stock' => 25,
-                'valid_until' => '2024-08-15'
-            ],
-            [
-                'id' => 3,
-                'image' => 'https://via.placeholder.com/150',
-                'name' => 'Kacamata Pelindung',
-                'size' => 'Universal',
-                'stock' => 50,
-                'valid_until' => '2026-05-10'
-            ],
-            [
-                'id' => 4,
-                'image' => 'https://via.placeholder.com/150',
-                'name' => 'Masker Respirator',
-                'size' => 'M',
-                'stock' => 40,
-                'valid_until' => '2024-10-30'
-            ]
-        ];
+        $apds = APD::all();
 
         // Pass the dummy data to the view
-        return view('admin.apd', compact('apds'));
+        return view('admin.apd.show-apd', compact('apds'));
 
     }
 
-    
+    public function add()
+    {
+        return view('admin.apd.add-apd');
+    }
+
+    public function upload(Request $request)
+    {
+        // Validate the request
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg', // Validasi foto
+            'name' => 'required',
+            'size' => 'required',
+            'stock' => 'required|numeric',
+            'valid_until' => 'required',
+        ]);
+
+        $imgUrl = cloudinary()->upload($request->file('image')->getRealPath(), [
+            'folder' => 'sika3',
+            'transformation' => [
+                'quality' => 'auto',
+                'format' => 'webp',
+            ],
+        ])->getSecurePath();
+
+        // Upload the data
+        APD::create([
+            'image' => $imgUrl,
+            'name' => $request->name,
+            'size' => $request->size,
+            'stock' => $request->stock,
+            'valid_until' => $request->valid_until
+        ]);
+
+        // Redirect to the previous page
+        return redirect()->back();
+    }
+
+
+
 }

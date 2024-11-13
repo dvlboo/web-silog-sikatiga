@@ -30,7 +30,7 @@
           <td class="py-2 px-6 text-center">{{ $risk['description'] }}</td>
           <td class="py-2 px-6 text-center">{{ \Carbon\Carbon::parse($risk['date'])->format('d-m-Y') }}</td>
           <td class="py-2 px-6">
-            <img src="{{ asset('storage/' . $risk['photo']) }}" alt="Risk Photo" class="w-12 h-12 object-cover">
+            <img src="{{ $risk['photo'] }}" alt="Risk Photo" class="w-12 h-12 object-cover">
         </td>
           <td class="py-2 px-6 text-center">{{ $risk['control'] }}</td>
           <td class="py-2 px-6 text-center">

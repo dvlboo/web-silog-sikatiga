@@ -21,7 +21,7 @@
               @enderror
             </td>
           </tr>
-  
+          
           <tr>
             <td class="font-semibold p-2">Nama Temuan</td>
             <td class="font-semibold">:</td>

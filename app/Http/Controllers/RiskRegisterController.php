@@ -31,10 +31,13 @@ class RiskRegisterController extends Controller
             'control' => 'required',
         ]);
 
-        $photoPath = null;
-        if ($request->hasFile('photo')) {
-            $photoPath = $request->file('photo')->store('photos', 'public');
-        }
+        $photoUrl = cloudinary()->upload($request->file('photo')->getRealPath(), [
+            'folder' => 'sika3',
+            'transformation' => [
+                'quality' => 'auto',
+                'format' => 'webp',
+            ],
+        ])->getSecurePath();     
 
         // Upload the data
         RiskRegister::create([
@@ -42,10 +45,9 @@ class RiskRegisterController extends Controller
             'name_finding' => $request->name_finding,
             'description' => $request->description,
             'date' => $request->date,
-            'photo' => $photoPath,
+            'photo' => $photoUrl,
             'control' => $request->control,
         ]);
-
 
         // Redirect to the previous page
         return redirect()->back();
