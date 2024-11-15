@@ -7,12 +7,21 @@ use Illuminate\Http\Request;
 
 class APDController extends Controller
 {
-    public function view()
+    public function apd()
     {
-        // Dummy Data
+        // Get all the data from the database
         $apds = APD::all();
 
-        // Pass the dummy data to the view
+        // Return the view
+        return view('users.apd', compact('apds'));
+    }
+
+    public function view()
+    {
+        // Get all the data from the database
+        $apds = APD::all();
+
+        // Return the view
         return view('admin.apd.show-apd', compact('apds'));
 
     }
@@ -41,13 +50,16 @@ class APDController extends Controller
             ],
         ])->getSecurePath();
 
+        // dd($request->all());
+        // dd($imgUrl);
+
         // Upload the data
         APD::create([
             'image' => $imgUrl,
             'name' => $request->name,
             'size' => $request->size,
             'stock' => $request->stock,
-            'valid_until' => $request->valid_until
+            'valid_until' => $request->valid_until,
         ]);
 
         // Redirect to the previous page

@@ -8,7 +8,7 @@
 
   {{-- menu --}}
   <div class="flex flex-row justify-between gap-10 text-blue-600">
-    <a class="font-semibold hover:font-bold" href="">APD</a>
+    <a class="font-semibold hover:font-bold" href="{{ url('/apd') }}">APD</a>
     <a class="font-semibold hover:font-bold" href="">APAR & P3K</a>
     <a class="font-semibold hover:font-bold" href="">COLOR CODE</a>
     <a class="font-semibold hover:font-bold" href="{{ url('/risk-register') }}">RISK REGISTER</a>

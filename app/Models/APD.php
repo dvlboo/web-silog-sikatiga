@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class APD extends Model
 {
-    use HasFactory, SoftDeletes, MediaAlly;
+    use MediaAlly, HasFactory, SoftDeletes;
 
     // Tentukan kolom yang dapat diisi (fillable)
     protected $fillable = [
@@ -24,4 +24,6 @@ class APD extends Model
     protected $casts = [
         'valid_until' => 'date',
     ];
+
+    protected $table = 'apds';
 }

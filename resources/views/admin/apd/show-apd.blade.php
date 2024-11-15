@@ -30,7 +30,7 @@
           <td class="py-2 px-6">{{ $apd['name'] }}</td>
           <td class="py-2 px-6 text-center">{{ $apd['size'] }}</td>
           <td class="py-2 px-6 text-center">{{ $apd['stock'] }}</td>
-          <td class="py-2 px-6 text-center">{{ $apd['valid_until'] }}</td>
+          <td class="py-2 px-6 text-center">{{ \Carbon\Carbon::parse($apd['valid_until'])->format('d M Y') }}</td>
           <td class="py-2 px-6 text-center">
             <button class="btn btn-sm btn-warning" onclick="showEditModal({{ $apd['id'] }})"><img width="21" height="21" src="https://img.icons8.com/material-rounded/21/edit--v1.png" alt="edit--v1"/></button>
             <button class="btn btn-sm btn-error" onclick="confirmDelete({{ $apd['id'] }})"><img width="21" height="21" src="https://img.icons8.com/ios-glyphs/21/filled-trash.png" alt="filled-trash"/></button>

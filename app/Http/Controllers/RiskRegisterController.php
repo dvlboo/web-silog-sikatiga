@@ -7,11 +7,6 @@ use Illuminate\Http\Request;
 
 class RiskRegisterController extends Controller
 {
-    public function show()
-    {
-        return view('users.risk-register-page');
-    }
-
     public function view()
     {
         $risks = RiskRegister::all();
